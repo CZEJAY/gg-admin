@@ -234,7 +234,7 @@ const ProductForm: FC<ProductFormProps> = ({
                   {
                     recalcPrice > 0 && (
                       <FormDescription>
-                       This will be the selling price "{formatPrice(recalcPrice)}"
+                       This will be the selling price &quot;{formatPrice(recalcPrice)}&quot;
                       </FormDescription>
                     )
                   }
@@ -358,7 +358,7 @@ const ProductForm: FC<ProductFormProps> = ({
                     />
                   </FormControl>
                   <FormDescription>
-                    This will increment the orignal price based on the value given, if "Discounted" is checked, the original price will be decremented
+                    This will increment the orignal price based on the value given, if &quot;Discounted&quot; is checked, the original price will be decremented
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -451,7 +451,7 @@ const ProductForm: FC<ProductFormProps> = ({
                   <div className="space-y-1 leading-none">
                     <FormLabel>Discounted</FormLabel>
                     <FormDescription>
-                      The product original price will be recalculated based on the value of the "Percentage" Field
+                      The product original price will be recalculated based on the value of the &quot;Percentage&quot; Field
                     </FormDescription>
                   </div>
                 </FormItem>
