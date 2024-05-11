@@ -60,16 +60,18 @@ export async function GET(
     {params}: {params: {storeId: string}}
 ) {
     try {
+        const body = await req.json()
 
+        const {storeId} = body
 
-        if(!params.storeId){
+        if(!storeId){
            return new NextResponse("storeId is required", { status: 400 });
         }
         
 
         const billboards = await prismadb.billboard.findMany({
             where: {
-                storeId: params.storeId
+                storeId: storeId
             }
         })
 
