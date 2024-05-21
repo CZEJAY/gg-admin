@@ -67,13 +67,16 @@ export async function GET(
         }
         
 
-        const billboards = await prismadb.billboard.findMany({
+        const categories = await prismadb.category.findMany({
             where: {
                 storeId: params.storeId
+            },
+            include: {
+                billboard: true,
             }
         })
 
-        return NextResponse.json(billboards);
+        return NextResponse.json(categories);
     } catch (error) {
         console.log('[BILLBOARD_GET]', error);
         return new NextResponse("Internal error", { status: 500 });
